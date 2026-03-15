@@ -7,7 +7,7 @@ import ThemeToggle from "@/components/ThemeToggle"
 
 const navLinks = [
   { label: "Home",   href: "/",                                        external: false },
-  { label: "GitHub", href: "https://github.com/yourusername/devforge", external: true  },
+  { label: "GitHub", href: "https://github.com/sheihan-javaid/DevForge", external: true  },
 ]
 
 export default function Navbar() {
