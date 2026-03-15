@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="public/icons/logo.png" alt="DevForge Logo" width="120" />
+# <img src="public/icons/logo.png" alt="DevForge Logo" width="32" height="32" style="vertical-align: middle;" /> DevForge
 
 # 🔧 DevForge
 
