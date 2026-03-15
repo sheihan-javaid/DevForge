@@ -1,0 +1,21 @@
+{
+  "name": "DevForge",
+  "short_name": "DevForge",
+  "description": "Free developer tools for everyday tasks",
+  "icons": [
+    {
+      "src": "/icons/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#7C3AED",
+  "background_color": "#f9fafb",
+  "display": "standalone",
+  "start_url": "/"
+}

@@ -45,12 +45,24 @@ export const metadata: Metadata = {
   authors:      [{ name: "DevForge" }],
   creator:      "DevForge",
   publisher:    "DevForge",
+  icons: {
+    icon: [
+      { url: "/icons/favicon.ico",       sizes: "any"                       },
+      { url: "/icons/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/icons/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+    ],
+    apple: "/icons/apple-touch-icon.png",
+    other: [
+      { rel: "android-chrome-192x192", url: "/icons/android-chrome-192x192.png" },
+      { rel: "android-chrome-512x512", url: "/icons/android-chrome-512x512.png" },
+    ],
+  },
   robots: {
     index:  true,
     follow: true,
     googleBot: {
-      index:            true,
-      follow:           true,
+      index:               true,
+      follow:              true,
       "max-video-preview": -1,
       "max-image-preview": "large",
       "max-snippet":       -1,
@@ -63,12 +75,21 @@ export const metadata: Metadata = {
     siteName:    "DevForge",
     type:        "website",
     locale:      "en_US",
+    images: [
+      {
+        url:    "/icons/android-chrome-512x512.png",
+        width:  512,
+        height: 512,
+        alt:    "DevForge",
+      },
+    ],
   },
   twitter: {
     card:        "summary_large_image",
     title:       "DevForge — Free Developer Tools",
     description: "Free online developer tools. No sign-up required.",
     creator:     "@devforge",
+    images:      ["/icons/android-chrome-512x512.png"],
   },
   alternates: {
     canonical: "https://devforge.io",
@@ -97,6 +118,8 @@ export default function RootLayout({
             `,
           }}
         />
+        {/* ── Web manifest ──────────────────────────────────────────────── */}
+        <link rel="manifest" href="/icons/site.webmanifest" />
       </head>
       <body
         className={`

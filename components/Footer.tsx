@@ -61,7 +61,7 @@ export default function Footer() {
             </p>
 
             <a
-              href="https://github.com/sheihan-javaid/devforge"
+              href="https://github.com/sheihan-javaid/DevForge"
               target="_blank"
               rel="noopener noreferrer"
               className="text-xs text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
