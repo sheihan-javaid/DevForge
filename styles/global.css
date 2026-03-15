@@ -1,0 +1,283 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Base resets ──────────────────────────────────────────────────────────── */
+
+@layer base {
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-gray-50 dark:bg-gray-950;
+    @apply text-gray-900 dark:text-gray-100;
+    @apply antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1, "ss01" 1;
+    min-height: 100dvh;
+  }
+
+  /* Headings */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold tracking-tight text-gray-900 dark:text-white;
+    text-wrap: balance;
+  }
+
+  /* Paragraphs */
+  p {
+    @apply leading-relaxed text-gray-600 dark:text-gray-400;
+    text-wrap: pretty;
+  }
+
+  /* Links */
+  a {
+    @apply text-violet-600 dark:text-violet-400;
+    @apply underline-offset-4;
+    @apply transition-colors duration-150;
+  }
+  a:hover {
+    @apply text-violet-700 dark:text-violet-300;
+  }
+
+  /* Code */
+  code, kbd, samp, pre {
+    font-family: var(--font-geist-mono), ui-monospace, "Cascadia Code",
+      "Source Code Pro", Menlo, Consolas, monospace;
+    font-feature-settings: normal;
+    font-size: 0.9em;
+  }
+
+  pre {
+    @apply overflow-x-auto rounded-xl p-4;
+    @apply bg-gray-100 dark:bg-gray-900;
+    @apply border border-gray-200 dark:border-gray-800;
+  }
+
+  code:not(pre code) {
+    @apply px-1.5 py-0.5 rounded-md text-[0.85em];
+    @apply bg-gray-100 dark:bg-gray-800;
+    @apply text-violet-700 dark:text-violet-400;
+    @apply border border-gray-200 dark:border-gray-700;
+  }
+
+  /* Form elements */
+  input, textarea, select {
+    @apply bg-white dark:bg-gray-900;
+    @apply text-gray-900 dark:text-gray-100;
+    @apply border-gray-200 dark:border-gray-700;
+    @apply placeholder-gray-400 dark:placeholder-gray-600;
+    font-family: inherit;
+  }
+
+  textarea {
+    resize: vertical;
+    field-sizing: content;
+    min-height: 8rem;
+  }
+
+  /* Focus ring — single consistent style across all interactive elements */
+  :focus-visible {
+    @apply outline-none ring-2 ring-violet-500 ring-offset-2;
+    @apply ring-offset-gray-50 dark:ring-offset-gray-950;
+  }
+
+  /* Buttons */
+  button {
+    cursor: pointer;
+    font-family: inherit;
+  }
+  button:disabled {
+    cursor: not-allowed;
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gray-300 dark:bg-gray-700;
+    border-radius: 999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-400 dark:bg-gray-600;
+  }
+
+  /* Selection */
+  ::selection {
+    @apply bg-violet-200 dark:bg-violet-800;
+    @apply text-violet-900 dark:text-violet-100;
+  }
+
+  /* Horizontal rule */
+  hr {
+    @apply border-gray-200 dark:border-gray-800;
+  }
+
+  /* Images */
+  img, video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+
+/* ── Component shorthands ─────────────────────────────────────────────────── */
+
+@layer components {
+
+  /* Card — the base surface used everywhere */
+  .card {
+    @apply bg-white dark:bg-gray-900;
+    @apply border border-gray-200 dark:border-gray-800;
+    @apply rounded-xl;
+  }
+
+  /* Tool page wrapper */
+  .tool-page {
+    @apply space-y-6 max-w-6xl mx-auto;
+  }
+
+  /* Section divider with label */
+  .section-label {
+    @apply text-xs font-medium uppercase tracking-widest;
+    @apply text-gray-400 dark:text-gray-500;
+  }
+
+  /* Pill badge */
+  .badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full;
+    @apply text-xs font-medium;
+  }
+  .badge-violet {
+    @apply badge bg-violet-100 text-violet-700;
+    @apply dark:bg-violet-900/30 dark:text-violet-400;
+  }
+  .badge-green {
+    @apply badge bg-green-100 text-green-700;
+    @apply dark:bg-green-900/30 dark:text-green-400;
+  }
+  .badge-red {
+    @apply badge bg-red-100 text-red-700;
+    @apply dark:bg-red-900/30 dark:text-red-400;
+  }
+  .badge-amber {
+    @apply badge bg-amber-100 text-amber-700;
+    @apply dark:bg-amber-900/30 dark:text-amber-400;
+  }
+
+  /* Toolbar toggle group — wraps mode/variant toggles */
+  .toggle-group {
+    @apply flex items-center rounded-lg overflow-hidden;
+    @apply border border-gray-200 dark:border-gray-700;
+    @apply text-sm;
+  }
+  .toggle-item {
+    @apply px-3.5 py-1.5 font-medium transition-colors;
+    @apply bg-white dark:bg-gray-900;
+    @apply text-gray-600 dark:text-gray-400;
+    @apply hover:bg-gray-50 dark:hover:bg-gray-800;
+  }
+  .toggle-item-active {
+    @apply toggle-item bg-violet-600 text-white;
+    @apply hover:bg-violet-600;
+  }
+
+  /* Toolbar ghost button */
+  .toolbar-btn {
+    @apply text-xs px-3 py-1.5 rounded-lg transition-colors;
+    @apply border border-gray-200 dark:border-gray-700;
+    @apply text-gray-500 dark:text-gray-400;
+    @apply hover:bg-gray-50 dark:hover:bg-gray-800;
+  }
+  .toolbar-btn-danger {
+    @apply toolbar-btn;
+    @apply hover:text-red-500 hover:border-red-200;
+    @apply dark:hover:text-red-400 dark:hover:border-red-800;
+  }
+
+  /* Stats bar — the metadata row under tool outputs */
+  .stats-bar {
+    @apply flex flex-wrap gap-x-6 gap-y-2;
+    @apply text-xs text-gray-400 dark:text-gray-500 px-1;
+  }
+  .stats-label {
+    @apply text-gray-300 dark:text-gray-600;
+  }
+
+  /* Primary action button */
+  .btn-primary {
+    @apply w-full py-2.5 rounded-xl text-sm font-medium transition-colors;
+    @apply bg-violet-600 hover:bg-violet-700 text-white;
+    @apply disabled:opacity-40 disabled:cursor-not-allowed;
+  }
+
+  /* Strength meter track */
+  .strength-track {
+    @apply h-1.5 w-full rounded-full bg-gray-200 dark:bg-gray-800 overflow-hidden;
+  }
+}
+
+/* ── Utilities ────────────────────────────────────────────────────────────── */
+
+@layer utilities {
+  /* Mono textarea — used inside TextAreaBox */
+  .textarea-mono {
+    font-family: var(--font-geist-mono), ui-monospace, monospace;
+    font-size: 0.8125rem;
+    line-height: 1.6;
+    tab-size: 2;
+  }
+
+  /* Animated gradient shimmer — for skeleton loaders */
+  .shimmer {
+    background: linear-gradient(
+      90deg,
+      theme("colors.gray.100") 25%,
+      theme("colors.gray.200") 50%,
+      theme("colors.gray.100") 75%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+  }
+  .dark .shimmer {
+    background: linear-gradient(
+      90deg,
+      theme("colors.gray.800") 25%,
+      theme("colors.gray.700") 50%,
+      theme("colors.gray.800") 75%
+    );
+    background-size: 200% 100%;
+  }
+
+  /* Hide scrollbar but keep scroll functionality */
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+  /* Fade in */
+  .animate-in {
+    animation: fadeIn 0.2s ease-out;
+  }
+}
+
+/* ── Keyframes ────────────────────────────────────────────────────────────── */
+
+@keyframes shimmer {
+  from { background-position: 200% 0; }
+  to   { background-position: -200% 0; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
