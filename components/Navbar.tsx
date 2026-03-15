@@ -1,13 +1,12 @@
 "use client"
 
 import Link from "next/link"
-import Image from "next/image"
 import { usePathname } from "next/navigation"
 import { useState } from "react"
 import ThemeToggle from "@/components/ThemeToggle"
 
 const navLinks = [
-  { label: "Home",   href: "/",                                        external: false },
+  { label: "Home",   href: "/",                                           external: false },
   { label: "GitHub", href: "https://github.com/sheihan-javaid/DevForge", external: true  },
 ]
 
@@ -25,12 +24,13 @@ export default function Navbar() {
             href="/"
             className="flex items-center gap-2 font-bold text-lg tracking-tight text-gray-900 dark:text-white hover:opacity-80 transition-opacity"
           >
-            <Image
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
               src="/icons/logo.png"
               alt="DevForge"
               width={32}
               height={32}
-              className="rounded-md"
+              className="rounded-md object-contain"
             />
             DevForge
           </Link>
