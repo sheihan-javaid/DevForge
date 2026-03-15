@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="public/icons/logo.png" alt="DevForge Logo" width="120" />
+
 # 🔧 DevForge
 
 **Free developer tools that just work.**
