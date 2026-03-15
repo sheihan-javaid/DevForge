@@ -71,7 +71,7 @@ Just visit **[devforge.io](https://devforge.io)** — no installation or sign-up
 
 ---
 
-## ❓ FAQ
+<!-- ## ❓ FAQ
 
 **Is DevForge free?**
 Yes, completely. All tools are free with no limits and no sign-up required.
@@ -85,9 +85,9 @@ Once the page loads, all tools work without an internet connection.
 **How do I report a bug or request a tool?**
 Open an issue on [GitHub](https://github.com/sheihan-javaid/DevForge/issues).
 
----
+--- -->
 
-## 📄 License
+<!-- ## 📄 License
 
 MIT — see [LICENSE](LICENSE) for details.
 
@@ -99,4 +99,4 @@ Made with ❤️ by developers, for developers.
 
 **[devforge.io](https://devforge.io)**
 
-</div>
+</div> -->
