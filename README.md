@@ -1,13 +1,14 @@
 <div align="center">
 
-# <img src="public/icons/logo.png" alt="DevForge Logo" width="32" height="32" style="vertical-align: middle;" /> DevForge
+<img src="public/icons/logo.png" alt="DevForge Logo" width="80" />
 
-# 🔧 DevForge
+# DevForge
 
 **Free developer tools that just work.**
 No sign-up. No tracking. Everything runs in your browser.
 
-<!-- [![Live Demo](https://img.shields.io/badge/Live%20Demo-devforge.io-7C3AED?style=for-the-badge&logo=vercel&logoColor=white)](https://devforge.io) -->
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-devforge.io-7C3AED?style=for-the-badge&logo=vercel&logoColor=white)](https://devforge.io)
+[![GitHub](https://img.shields.io/badge/GitHub-sheihan--javaid%2FDevForge-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/sheihan-javaid/DevForge)
 
 </div>
 
@@ -20,6 +21,7 @@ DevForge is a collection of free, fast, and privacy-friendly tools built for dev
 No installation. No account. No data sent to any server. Just open the tool and use it.
 
 ---
+
 ## 🧰 Tools
 
 ### 📋 Formatters & Validators
@@ -49,17 +51,52 @@ No installation. No account. No data sent to any server. Just open the tool and 
 
 ---
 
-## 🔒 Privacy
+## 🚀 Getting Started
 
-DevForge takes your privacy seriously:
+Just visit **[devforge.io](https://devforge.io)** — no installation or sign-up required.
 
-- **Nothing is sent to a server** — all processing happens in your browser
-- **No account required** — use every tool without signing up
-- **No tracking** — no analytics, no fingerprinting, no cookies
-- **No ads** (currently) — clean, distraction-free experience
-- **Open source** — the code is publicly auditable on GitHub
-
-This means you can safely paste sensitive data like JWT tokens, passwords, API keys, and private text without any risk.
+1. Use the **search bar** on the homepage to find a tool
+2. Click any tool card to open it
+3. Paste your input and get results instantly
+4. Copy the output with the **Copy** button
 
 ---
 
+## 🔒 Privacy
+
+- Everything runs **100% in your browser**
+- Nothing you type is ever sent to a server
+- No account, no tracking, no cookies
+- Safe to use with sensitive data like JWT tokens, passwords, and API keys
+
+---
+
+## ❓ FAQ
+
+**Is DevForge free?**
+Yes, completely. All tools are free with no limits and no sign-up required.
+
+**Is my data safe?**
+Yes. All processing happens locally in your browser. Nothing is ever sent to a server.
+
+**Can I use it offline?**
+Once the page loads, all tools work without an internet connection.
+
+**How do I report a bug or request a tool?**
+Open an issue on [GitHub](https://github.com/sheihan-javaid/DevForge/issues).
+
+---
+
+## 📄 License
+
+MIT — see [LICENSE](LICENSE) for details.
+
+---
+
+<div align="center">
+
+Made with ❤️ by developers, for developers.
+
+**[devforge.io](https://devforge.io)**
+
+</div>
