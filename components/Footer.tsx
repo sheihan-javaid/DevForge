@@ -1,5 +1,4 @@
 import Link from "next/link"
-import Image from "next/image"
 
 const FOOTER_LINKS = [
   {
@@ -36,6 +35,16 @@ const FOOTER_LINKS = [
   },
 ]
 
+// Buy Me a Coffee icon
+function BmcIcon() {
+  return (
+    <svg width="16" height="16" viewBox="0 0 27 39" fill="none">
+      <path d="M14.3206 17.9122..." fill="#FFDD00" />
+      <path d="M26.6584 10.3609..." fill="currentColor" />
+    </svg>
+  )
+}
+
 export default function Footer() {
   return (
     <footer className="border-t border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 mt-16">
@@ -47,7 +56,7 @@ export default function Footer() {
           <div className="space-y-4">
             <Link
               href="/"
-              className="flex items-center gap-2 font-bold text-lg tracking-tight text-gray-900 dark:text-white no-underline hover:opacity-80 transition-opacity"
+              className="flex items-center gap-2 font-bold text-lg tracking-tight text-gray-900 dark:text-white"
             >
               <span className="flex items-center justify-center w-7 h-7 rounded-md bg-violet-600 text-white text-xs font-bold">
                 D
@@ -55,52 +64,52 @@ export default function Footer() {
               DevForge
             </Link>
 
-            <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
+            <p className="text-sm text-gray-500 dark:text-gray-400">
               Free developer tools for everyday tasks. No sign-up, no tracking,
               everything runs in your browser.
             </p>
 
             <div className="flex items-center gap-3">
+
+              {/* GitHub */}
               <a
                 href="https://github.com/sheihan-javaid/DevForge"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-xs text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
+                className="text-xs text-gray-400 hover:text-gray-600"
               >
                 GitHub ↗
               </a>
 
               <span className="text-gray-200 dark:text-gray-700">|</span>
 
+              {/* Buy Me Coffee */}
               <a
                 href="https://razorpay.me/@mohammadsheihanjavaid"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-1.5 text-xs text-gray-400 dark:text-gray-500 hover:text-yellow-500 dark:hover:text-yellow-400 transition-colors"
+                className="flex items-center gap-1.5 text-xs text-gray-400 hover:text-yellow-500"
               >
-                <Image
-                  src="/bmc.svg"
-                  alt="Buy me a coffee"
-                  width={14}
-                  height={14}
-                />
+                <BmcIcon />
                 Buy me a coffee
               </a>
+
             </div>
           </div>
 
           {/* Links */}
           {FOOTER_LINKS.map(({ group, links }) => (
             <div key={group} className="space-y-4">
-              <h3 className="text-xs font-semibold uppercase tracking-widest text-gray-400 dark:text-gray-500">
+              <h3 className="text-xs font-semibold uppercase tracking-widest text-gray-400">
                 {group}
               </h3>
+
               <ul className="space-y-2.5">
                 {links.map(({ label, href }) => (
                   <li key={href}>
                     <Link
                       href={href}
-                      className="text-sm text-gray-500 dark:text-gray-400 hover:text-violet-600 dark:hover:text-violet-400 transition-colors"
+                      className="text-sm text-gray-500 hover:text-violet-600"
                     >
                       {label}
                     </Link>
@@ -114,12 +123,14 @@ export default function Footer() {
 
         {/* Bottom */}
         <div className="mt-10 pt-6 border-t border-gray-100 dark:border-gray-800 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-xs text-gray-400 dark:text-gray-500">
+
+          <p className="text-xs text-gray-400">
             © {new Date().getFullYear()} DevForge. All tools are free to use.
           </p>
 
           <div className="flex items-center gap-4">
-            <div className="flex items-center gap-1.5 text-xs text-gray-400 dark:text-gray-500">
+
+            <div className="flex items-center gap-1.5 text-xs text-gray-400">
               <span className="w-1.5 h-1.5 rounded-full bg-green-500 inline-block" />
               All tools run client-side — nothing is sent to a server.
             </div>
@@ -128,16 +139,12 @@ export default function Footer() {
               href="https://razorpay.me/@mohammadsheihanjavaid"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-1.5 text-xs text-yellow-600 dark:text-yellow-400 hover:text-yellow-700 dark:hover:text-yellow-300 transition-colors font-medium"
+              className="flex items-center gap-1.5 text-xs text-yellow-600 font-medium"
             >
-              <Image
-                src="/bmc.svg"
-                alt="Buy me a coffee"
-                width={14}
-                height={14}
-              />
+              <BmcIcon />
               Buy me a coffee
             </a>
+
           </div>
         </div>
 
