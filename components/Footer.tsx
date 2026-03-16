@@ -29,18 +29,19 @@ const FOOTER_LINKS = [
       { label: "String Case", href: "/tools/string-case" },
       { label: "YAML to JSON", href: "/tools/yaml-json" },
       { label: "Random String", href: "/tools/random-string" },
-      { label: "Diff Checker", href: "/tools/diff-checker" },
-      { label: "Cron Parser", href: "/tools/cron-parser" },
     ],
   },
 ]
 
-// Buy Me a Coffee icon
+// Buy Me a Coffee Icon
 function BmcIcon() {
   return (
-    <svg width="16" height="16" viewBox="0 0 27 39" fill="none">
-      <path d="M14.3206 17.9122..." fill="#FFDD00" />
-      <path d="M26.6584 10.3609..." fill="currentColor" />
+    <svg
+      className="w-4 h-4"
+      viewBox="0 0 24 24"
+      fill="currentColor"
+    >
+      <path d="M18 8h1a3 3 0 010 6h-1v1a4 4 0 01-4 4H7a4 4 0 01-4-4V8h15zm1 2H5v5a2 2 0 002 2h7a2 2 0 002-2v-5h3a1 1 0 000-2z"/>
     </svg>
   )
 }
@@ -54,6 +55,7 @@ export default function Footer() {
 
           {/* Brand */}
           <div className="space-y-4">
+
             <Link
               href="/"
               className="flex items-center gap-2 font-bold text-lg tracking-tight text-gray-900 dark:text-white"
@@ -76,19 +78,19 @@ export default function Footer() {
                 href="https://github.com/sheihan-javaid/DevForge"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-xs text-gray-400 hover:text-gray-600"
+                className="text-xs text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
               >
                 GitHub ↗
               </a>
 
-              <span className="text-gray-200 dark:text-gray-700">|</span>
+              <span className="text-gray-300 dark:text-gray-700">|</span>
 
-              {/* Buy Me Coffee */}
+              {/* Buy Me a Coffee */}
               <a
                 href="https://razorpay.me/@mohammadsheihanjavaid"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-1.5 text-xs text-gray-400 hover:text-yellow-500"
+                className="flex items-center gap-1.5 text-xs text-gray-400 hover:text-yellow-500 transition-colors"
               >
                 <BmcIcon />
                 Buy me a coffee
@@ -97,10 +99,11 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Links */}
+          {/* Footer Links */}
           {FOOTER_LINKS.map(({ group, links }) => (
             <div key={group} className="space-y-4">
-              <h3 className="text-xs font-semibold uppercase tracking-widest text-gray-400">
+
+              <h3 className="text-xs font-semibold uppercase tracking-widest text-gray-400 dark:text-gray-500">
                 {group}
               </h3>
 
@@ -109,13 +112,14 @@ export default function Footer() {
                   <li key={href}>
                     <Link
                       href={href}
-                      className="text-sm text-gray-500 hover:text-violet-600"
+                      className="text-sm text-gray-500 dark:text-gray-400 hover:text-violet-600 dark:hover:text-violet-400 transition-colors"
                     >
                       {label}
                     </Link>
                   </li>
                 ))}
               </ul>
+
             </div>
           ))}
 
@@ -124,13 +128,13 @@ export default function Footer() {
         {/* Bottom */}
         <div className="mt-10 pt-6 border-t border-gray-100 dark:border-gray-800 flex flex-col sm:flex-row items-center justify-between gap-3">
 
-          <p className="text-xs text-gray-400">
+          <p className="text-xs text-gray-400 dark:text-gray-500">
             © {new Date().getFullYear()} DevForge. All tools are free to use.
           </p>
 
           <div className="flex items-center gap-4">
 
-            <div className="flex items-center gap-1.5 text-xs text-gray-400">
+            <div className="flex items-center gap-1.5 text-xs text-gray-400 dark:text-gray-500">
               <span className="w-1.5 h-1.5 rounded-full bg-green-500 inline-block" />
               All tools run client-side — nothing is sent to a server.
             </div>
@@ -139,13 +143,14 @@ export default function Footer() {
               href="https://razorpay.me/@mohammadsheihanjavaid"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-1.5 text-xs text-yellow-600 font-medium"
+              className="flex items-center gap-1.5 text-xs text-yellow-600 dark:text-yellow-400 hover:text-yellow-700 dark:hover:text-yellow-300 font-medium transition-colors"
             >
               <BmcIcon />
               Buy me a coffee
             </a>
 
           </div>
+
         </div>
 
       </div>
