@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 
 const FOOTER_LINKS = [
   {
@@ -44,7 +45,6 @@ export default function Footer() {
 
           {/* Brand */}
           <div className="space-y-4">
-
             <Link
               href="/"
               className="flex items-center gap-2 font-bold text-lg tracking-tight text-gray-900 dark:text-white no-underline hover:opacity-80 transition-opacity"
@@ -60,25 +60,41 @@ export default function Footer() {
               everything runs in your browser.
             </p>
 
-            <a
-              href="https://github.com/sheihan-javaid/DevForge"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-xs text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
-            >
-              GitHub ↗
-            </a>
+            <div className="flex items-center gap-3">
+              <a
+                href="https://github.com/sheihan-javaid/DevForge"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xs text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
+              >
+                GitHub ↗
+              </a>
 
+              <span className="text-gray-200 dark:text-gray-700">|</span>
+
+              <a
+                href="https://razorpay.me/@mohammadsheihanjavaid"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1.5 text-xs text-gray-400 dark:text-gray-500 hover:text-yellow-500 dark:hover:text-yellow-400 transition-colors"
+              >
+                <Image
+                  src="/bmc.svg"
+                  alt="Buy me a coffee"
+                  width={14}
+                  height={14}
+                />
+                Buy me a coffee
+              </a>
+            </div>
           </div>
 
           {/* Links */}
           {FOOTER_LINKS.map(({ group, links }) => (
             <div key={group} className="space-y-4">
-
               <h3 className="text-xs font-semibold uppercase tracking-widest text-gray-400 dark:text-gray-500">
                 {group}
               </h3>
-
               <ul className="space-y-2.5">
                 {links.map(({ label, href }) => (
                   <li key={href}>
@@ -91,7 +107,6 @@ export default function Footer() {
                   </li>
                 ))}
               </ul>
-
             </div>
           ))}
 
@@ -99,16 +114,31 @@ export default function Footer() {
 
         {/* Bottom */}
         <div className="mt-10 pt-6 border-t border-gray-100 dark:border-gray-800 flex flex-col sm:flex-row items-center justify-between gap-3">
-
           <p className="text-xs text-gray-400 dark:text-gray-500">
             © {new Date().getFullYear()} DevForge. All tools are free to use.
           </p>
 
-          <div className="flex items-center gap-2 text-xs text-gray-400 dark:text-gray-500">
-            <span className="w-1.5 h-1.5 rounded-full bg-green-500 inline-block" />
-            All tools run client-side — nothing is sent to a server.
-          </div>
+          <div className="flex items-center gap-4">
+            <div className="flex items-center gap-1.5 text-xs text-gray-400 dark:text-gray-500">
+              <span className="w-1.5 h-1.5 rounded-full bg-green-500 inline-block" />
+              All tools run client-side — nothing is sent to a server.
+            </div>
 
+            <a
+              href="https://razorpay.me/@mohammadsheihanjavaid"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1.5 text-xs text-yellow-600 dark:text-yellow-400 hover:text-yellow-700 dark:hover:text-yellow-300 transition-colors font-medium"
+            >
+              <Image
+                src="/bmc.svg"
+                alt="Buy me a coffee"
+                width={14}
+                height={14}
+              />
+              Buy me a coffee
+            </a>
+          </div>
         </div>
 
       </div>
