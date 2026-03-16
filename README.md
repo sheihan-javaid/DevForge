@@ -54,7 +54,7 @@ No installation. No account. No data sent to any server. Just open the tool and 
 
 ## 🚀 Getting Started
 
-Just visit **[devforge.io](https://devforge.io)** — no installation or sign-up required.
+Just visit **[DevForge](https://devforge-kit.vercel.app)** — no installation or sign-up required.
 
 1. Use the **search bar** on the homepage to find a tool
 2. Click any tool card to open it
